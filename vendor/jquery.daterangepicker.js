@@ -2330,7 +2330,6 @@
 
                     var todayDivAttr = {
                         time: today.time,
-                        'data-tooltip': today.tooltip,
                         'class': 'day ' + today.type + ' ' + today.extraClass + ' ' + (today.valid ? 'valid' : 'invalid') + ' ' + (highlightToday ? 'real-today' : '')
                     };
 
