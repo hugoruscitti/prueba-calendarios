@@ -20,14 +20,9 @@ export default Ember.Component.extend({
       batchMode: batchMode,
     	showShortcuts: false,
       singleDate: singleDate,
-      hoveringTooltip: true   ,
-      hoveringTooltip: function(days) {
-  var D = ['One','Two', 'Three','Four','Five'];
-  return D[days] ? D[days] : days;
-},
+      hoveringTooltip: false,
       showTopbar: false,
     });
 
-    console.log({batchMode});
   }
 });
