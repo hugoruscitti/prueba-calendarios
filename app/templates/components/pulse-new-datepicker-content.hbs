@@ -1,0 +1,65 @@
+
+<div class="ui one column grid">
+
+  <div class="column left aligned">
+
+    <form class="ui form" action="">
+        <div class="field">
+            <label>Periodo</label>
+
+            {{#ui-dropdown class="selection" selected=selected onChange=(action (mut selected)) as |execute mapper|}}
+              <div class="default text">Periodo</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                {{#each periodos as |pediodo|}}
+                  <div class="item" data-value="{{pediodo.text}}">
+                    {{pediodo.text}}
+                  </div>
+                {{/each}}
+              </div>
+            {{/ui-dropdown}}
+
+        </div>
+
+        <!--
+        <div class="two fields">
+          <div class="field">
+            <label>Desde</label>
+            {{input value=from_string disabled=true}}
+          </div>
+          <div class="field">
+            <label>Hasta</label>
+            {{input value=from_string disabled=true}}
+          </div>
+        </div>
+        -->
+
+    </form>
+  </div>
+
+
+  <div class="column z-index-0">
+
+
+
+    {{#if esDia}}
+      {{pulse-calendar wholeMonth=false}}
+    {{/if}}
+
+
+    {{#if esMes}}
+      {{pulse-calendar wholeMonth=true}}
+    {{/if}}
+
+
+
+
+        <div class="field buttons-field">
+          <button type="button" class="ui button primary disabled" {{action 'apply'}}>(prueba)</button>
+          <button type="button" class="ui button disabled" {{action 'cancel'}}>(prueba)</button>
+        </div>
+
+    </div>
+
+  {{yield}}
+</div>

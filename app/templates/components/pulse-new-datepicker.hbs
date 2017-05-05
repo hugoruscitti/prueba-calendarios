@@ -1,0 +1,11 @@
+<div class="ui left icon input date-input">
+  <input type="text" class="pointer" value="texto de prueba" readonly="" {{action "showPopup"}}>
+  <i class="icon calendar"></i>
+</div>
+
+<div class="ui popup popup-date-picker">
+  {{pulse-new-datepicker-content}}
+</div>
+
+
+{{yield}}
