@@ -21,7 +21,7 @@ module.exports = function(defaults) {
 
   app.import('vendor/moment.min.js');
   app.import('vendor/daterangepicker.min.css');
-  app.import('vendor/jquery.daterangepicker.min.js');
+  app.import('vendor/jquery.daterangepicker.js');
 
   return app.toTree();
 };
